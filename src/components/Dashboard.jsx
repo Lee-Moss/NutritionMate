@@ -1,45 +1,56 @@
 import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
+import { Flex, Box, Link as ChakraLink } from "@chakra-ui/react";
 import {
   Home,
   About,
   SearchFood,
-  SearchWorkout,
+  SearchWorkouts,
 } from "../components/CardComponents";
-import "../styles/dashboard.css";
 
 export default function Dashboard() {
   return (
-    <>
-      <nav>
-        <Link to="/" className="link">
+    <Flex direction="column" align="center" bg="gray.100" p={4}>
+      <Box as="nav" bg="white" p={4} shadow="md" rounded="md">
+        <ChakraLink
+          as={Link}
+          to="/"
+          fontSize={["md", "lg", "xl", "3xl"]}
+          mr={20}
+        >
           Home
-        </Link>
-        <Link to="/About" className="link">
+        </ChakraLink>
+        <ChakraLink
+          as={Link}
+          to="/About"
+          fontSize={["md", "lg", "xl", "3xl"]}
+          mr={20}
+        >
           About
-        </Link>
-        <Link to="/SearchFood" className="link">
+        </ChakraLink>
+        <ChakraLink
+          as={Link}
+          to="/SearchFood"
+          fontSize={["md", "lg", "xl", "3xl"]}
+          mr={20}
+        >
           Food
-        </Link>
-        <Link to="/SearchWorkout" className="link">
+        </ChakraLink>
+        <ChakraLink
+          as={Link}
+          to="/SearchWorkouts"
+          fontSize={["md", "lg", "xl", "3xl"]}
+        >
           Workout
-        </Link>
-      </nav>
+        </ChakraLink>
+      </Box>
 
-      {/* <Routes>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route exact path="/About">
-          <About />
-        </Route>
-        <Route exact path="/SearchFood">
-          <SearchFood />
-        </Route>
-        <Route exact path="/SearchWorkout">
-          <SearchWorkout />
-        </Route>
-      </Routes> */}
-    </>
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/SearchFood" element={<SearchFood />} />
+        <Route path="/SearchWorkouts" element={<SearchWorkouts />} />
+      </Routes>
+    </Flex>
   );
 }
