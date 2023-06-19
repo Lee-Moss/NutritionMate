@@ -1,0 +1,32 @@
+.home-container {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.home-heading {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.home-info {
+  color: #777;
+  font-size: 16px;
+}
+
+.home-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* .calories-button:hover {
+  background-color: #0056b3;
+} */
